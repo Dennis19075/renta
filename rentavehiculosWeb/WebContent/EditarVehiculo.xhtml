@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<f:metadata>
+</f:metadata>
+<h:head>
+	<title>Editar Vehiculo</title>
+</h:head>
+<body>
+	<p:growl>
+		<p:autoUpdate />
+	</p:growl>
+	<h:form>
+		<p:menubar>
+			<p:menuitem value="Regresar" icon="pi pi-home" action="Vehiculos"/>
+		</p:menubar>
+	</h:form>
+	<p:panel>
+		<h2>Editar Vehiculos</h2>
+		<h:form>
+			<p:panelGrid columns="2">
+				<h:outputText value="Placa:" />
+				<h:outputText value="#{beanVehiculo.editarVehiculo.placaveh}" />
+				<h:outputText value="Marca:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.marcaveh}"
+					required="true" requiredMessage="Ingrese la marca" />
+				<h:outputText value="Modelo:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.modeloveh}"
+					required="true" requiredMessage="Ingrese el modelo" />
+				<h:outputText value="Tipo:" />
+				<p:inputText value="#{beanVehiculo.idTipoVehiculo}"
+					required="true" requiredMessage="Ingrese el tipo de vehiculo" />
+				<h:outputText value="Año:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.anomodeloveh}"
+					required="true" requiredMessage="Ingrese el año" />
+				<h:outputText value="Color:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.colorveh}"
+					required="true" requiredMessage="Ingrese el color" />
+				<h:outputText value="Capacidad:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.capacidadpersonaseh}"
+					required="true" requiredMessage="Ingrese la capacidad" />
+				<h:outputText value="Disponibilidad:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.disponibilidadeh}"
+					required="true" requiredMessage="Ingrese la disponibilidad" />
+				<h:outputText value="Precio:" />
+				<p:inputText value="#{beanVehiculo.editarVehiculo.preciorentaveh}"
+					required="true" requiredMessage="Ingrese el Precio" />
+				<p:commandButton value="Guardar" icon="pi pi-save" update="@form"
+					actionListener="#{beanVehiculo.actualizarVehiculo()}" action="Vehiculos" ></p:commandButton>
+			</p:panelGrid>
+		</h:form>
+	</p:panel>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+</f:metadata>
+
+<h:head>
+	<title>Tipo Vehiculo</title>
+</h:head>
+<body>
+	<p:growl>
+		<p:autoUpdate />
+	</p:growl>
+	<h:form>
+		<p:menubar>
+			<p:menuitem value="Regresar" icon="pi pi-home" />
+		</p:menubar>
+	</h:form>
+	<p:panel>
+		<h:form>
+			<p:dataTable value="#{beanTipoVehiculo.listaTipoVehiculo}" var="b"
+				emptyMessage="No hay registros aún." paginator="true" rows="30">
+				<p:column headerText="Id Tipo Vehiculo">
+					<h:outputText value="#{b.idtipovehiculoeh}" />
+				</p:column>
+				<p:column headerText="Tipo Camioneta">
+					<h:outputText value="#{b.tipocamionetaveh}" />
+				</p:column>
+				<p:column headerText="Tipo Convertible">
+					<h:outputText value="#{b.tipoconvertibleeh}" />
+				</p:column>
+				<p:column headerText="Tipo Coupe">
+					<h:outputText value="#{b.tipocoupe}" />
+				</p:column>
+				<p:column headerText="Tipo Jeep">
+					<h:outputText value="#{b.tipojeepveh}" />
+				</p:column>
+				<p:column headerText="Tipo Limosina">
+					<h:outputText value="#{b.tipolimusinaeh}" />
+				</p:column>
+				<p:column headerText="Tipo Sedan">
+					<h:outputText value="#{b.tiposedaneh}" />
+				</p:column>
+				<p:column headerText="Tipo Vaneh">
+					<h:outputText value="#{b.tipovaneh}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</p:panel>
+</body>
+</html>
